@@ -1,8 +1,27 @@
-# React + Vite
+# MovieBuffs-GPT
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# What we have completed: 
 
-Currently, two official plugins are available:
+1. React app using vite
+2. Tailwind configuration
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+
+# PLANNING FIRST:
+
+# Features
+    -Login/Sign Up
+    -Sign In/Sign Up Form
+    -redirect to Browse Page
+    -Browse(after Authentication)
+    -Header
+    -Main Movie
+        -Tailer in Bg
+        -Title and description
+        -Movie Suggestions 
+        -MovieLists * N
+    -NetflixGPT
+    -Search Bar
+    -Movie Suggestions
+
+
+

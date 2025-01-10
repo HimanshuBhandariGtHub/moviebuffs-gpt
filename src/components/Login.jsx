@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import Header from './Header'
-import { checkValidateData } from '../assets/utils/validate';
+import { checkValidateData } from '../utils/validate';
 
 const Login = () => {
   const[isSignInForm, setIsSignInForm] = useState(true);
@@ -12,8 +12,9 @@ const Login = () => {
 
   const handleButtonClick=()=>{
     //validate the form data
-    console.log(fullName);
-    const message= checkValidateData(email.current.value, password.current.value, fullName.current.value);
+    // console.log(fullName, email, password);
+    // isSignInForm && fullName.current.value , to check how to implement when input field in empty
+    const message= checkValidateData(email.current.value, password.current.value);
     setErrorMessage(message);
 
     // sign in/sign up

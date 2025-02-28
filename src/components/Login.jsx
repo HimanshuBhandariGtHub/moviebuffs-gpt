@@ -3,7 +3,7 @@ import Header from './Header'
 import { checkValidateData } from '../utils/validate';
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import {auth} from "../utils/firebase"
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 
@@ -12,7 +12,7 @@ import { addUser } from '../utils/userSlice';
 const Login = () => {
   const[isSignInForm, setIsSignInForm] = useState(true);
   const[errorMessage, setErrorMessage] = useState(null);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const dispatch= useDispatch();
 
   const fullName = useRef(null);
@@ -51,7 +51,7 @@ const Login = () => {
       }).then(() => {
         const {uid, email, displayName, photoURL} = auth.currentUser; //here we r trying to fetch user from updated value
         dispatch(addUser({uid:uid, email:email, displayName: displayName, photoURL: photoURL}));
-        navigate("/browse");
+        // navigate("/browse");
       }).catch((error) => {
         setErrorMessage(error.message);
       });
@@ -69,7 +69,7 @@ const Login = () => {
       // Signed in 
       const user = userCredential.user;
       // console.log(user); //to validate if api sucessfull or not
-      navigate("/browse")
+      // navigate("/browse")
     })
     .catch((error) => {
       const errorCode = error.code;
